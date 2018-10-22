@@ -1,0 +1,120 @@
+[
+    { "key": "ctrl+[", "command": "closeReferenceSearchEditor",               "when": "inReferenceSearchEditor && !config.editor.stablePeek" },
+    { "key": "ctrl+[", "command": "cancelSelection",                          "when": "editorHasSelection && textInputFocus" },
+    { "key": "ctrl+[", "command": "removeSecondaryCursors",                   "when": "editorHasMultipleSelections && textInputFocus" },
+    { "key": "ctrl+[", "command": "closeBreakpointWidget",                    "when": "breakpointWidgetVisible && textInputFocus" },
+    { "key": "ctrl+[", "command": "closeReviewPanel",                         "when": "reviewPanelVisible" },
+    { "key": "ctrl+[", "command": "editor.action.webvieweditor.hideFind",     "when": "webviewEditorFocus && webviewFindWidgetVisible" },
+    { "key": "ctrl+[", "command": "settings.action.clearSearchResults",       "when": "inSettingsSearch" },
+    { "key": "ctrl+[", "command": "closeFindWidget",                          "when": "editorFocus && findWidgetVisible" },
+    { "key": "ctrl+[", "command": "leaveEditorMessage",                       "when": "messageVisible" },
+    { "key": "ctrl+[", "command": "closeDirtyDiff",                           "when": "dirtyDiffVisible" },
+    { "key": "ctrl+[", "command": "closeMarkersNavigation",                   "when": "editorFocus && markersNavigationVisible" },
+    { "key": "ctrl+[", "command": "cancelRenameInput",                        "when": "editorFocus && renameInputVisible" },
+    { "key": "ctrl+[", "command": "closeAccessibilityHelp",                   "when": "accessibilityHelpWidgetVisible && editorFocus" },
+    { "key": "ctrl+[", "command": "closeReplaceInFilesWidget",                "when": "replaceInputBoxFocus && searchViewletVisible" },
+    { "key": "ctrl+[", "command": "keybindings.editor.clearSearchResults",    "when": "inKeybindings && inKeybindingsSearch" },
+    { "key": "ctrl+[", "command": "list.clear",                               "when": "listFocus && listHasSelectionOrFocus && !inputFocus" },
+    { "key": "ctrl+[", "command": "search.action.cancel",                     "when": "listFocus && searchViewletVisible && !inputFocus" },
+    { "key": "ctrl+[", "command": "workbench.action.closeQuickOpen",          "when": "inQuickOpen" },
+    { "key": "ctrl+[", "command": "workbench.action.hideInterfaceOverview",   "when": "interfaceOverviewVisible" },
+    { "key": "ctrl+[", "command": "workbench.action.terminal.clearSelection", "when": "terminalFocus && terminalTextSelected && !terminalFindWidgetVisible" },
+    { "key": "ctrl+[", "command": "workbench.action.terminal.hideFindWidget", "when": "terminalFindWidgetVisible && terminalFocus" },
+    { "key": "ctrl+[", "command": "breadcrumbs.selectEditor",                 "when": "breadcrumbsActive && breadcrumbsVisible" },
+    { "key": "ctrl+[", "command": "closeReferenceSearch",                     "when": "referenceSearchVisible && !config.editor.stablePeek" },
+    { "key": "ctrl+[", "command": "notifications.hideList",                   "when": "notificationCenterVisible" },
+    {
+        "key": "ctrl+[",
+        "command": "notifications.hideToasts",
+        "when": "notificationToastsVisible"
+    },
+    // Elixir Test Custom Tasks
+    {
+        "key": "ctrl+, s",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Elixir Test Suite"
+    },
+    {
+        "key": "ctrl+, f",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Elixir Test File"
+    },
+    {
+        "key": "ctrl+, n",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Elixir Nearest Test"
+    },
+    {
+        "key": "ctrl+, l",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Elixir Last Test"
+    },
+  // ctrl-hjkl to move between panes and terminal
+
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus && activeViewlet == 'workbench.panel.terminal'"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // ctrl-hjkl to move through menus
+  {
+    "key": "ctrl+j",
+    "command": "list.focusDown",
+    "when": "listFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "list.focusUp",
+    "when": "listFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when":
+      "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when":
+      "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer"
+  }
+]
