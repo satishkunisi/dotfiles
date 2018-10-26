@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Test Suite",
+            "type": "shell",
+            "command": "elixir .vscode/mix_test_tasks.exs --scope suite",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Test File",
+            "type": "shell",
+            "command": "elixir .vscode/mix_test_tasks.exs --file-name ${relativeFile} --scope file --is-umbrella",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Nearest Test",
+            "type": "shell",
+            "command": "elixir .vscode/mix_test_tasks.exs --file-name ${relativeFile} --line-number ${lineNumber} --scope nearest --is-umbrella",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run Last Test",
+            "type": "shell",
+            "command": "elixir .vscode/mix_test_tasks.exs --scope last --is-umbrella",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
